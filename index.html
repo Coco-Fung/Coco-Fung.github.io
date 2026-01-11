@@ -160,6 +160,34 @@
                 font-size: 1.3em;
             }
 
+            /* --- Mobile Responsiveness --- */
+            @media screen and (max-width: 980px) {
+                #main .container {
+                    min-width: 100% !important;
+                    width: 100%;
+                    padding: 1em;
+                }
+
+                #three .features article {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                #three .features article .image {
+                    margin: 1em 0 0 0;
+                    width: 150px !important;
+                }
+
+                #four .feature-icons li {
+                    width: 100% !important;
+                    margin-right: 0;
+                }
+
+                #header .image.avatar {
+                    width: 80px;
+                }
+            }
+
             .typed-cursor {
                 color: #81c784;
                 animation: typed-blink 0.7s infinite;
@@ -175,8 +203,7 @@
                 <span class="image avatar"><img src="images/coco_avatar.png" alt="Coco Fung" /></span>
                 <h1 id="logo"><a href="#">Tze Hing (Coco) Fung</a></h1>
                 <p>Psychology Major at EdUHK<br />
-                TESOL/TEFL Certified Educator.<br />
-            </p>
+                TESOL/TEFL Certified Educator.</p>
             </header>
 
             <nav id="nav">
@@ -303,7 +330,7 @@
                                     <p><i>World TESOL Academy • Issued June 1, 2025</i></p>
                                     <p>Credential ID: WTA222104088</p>
                                     <ul>
-                                        <li>Bearer has successfully completed an accredited training course focusing on the teaching of the English language to non-native students.</li>
+                                        <li>Successfully completed an accredited training course focusing on teaching the English language to non-native students.</li>
                                         <li>Qualified for instruction in both overseas and online classroom environments.</li>
                                         <li>Accredited by ACCREDITAT and The CPD Certification Service.</li>
                                     </ul>
