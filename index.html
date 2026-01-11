@@ -1,140 +1,398 @@
 <!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>2025 Computer Network Practice</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<!-- Header -->
-		<section id="header">
-			<header>
-				<span class="image avatar"><img src="images/master_gopher.png" alt="" /></span>
-				<h1 id="logo"><a href="#">Sunghwan Park</a></h1>
-				<p>I'm an instructor for<br />
-				CompNet@CAU in 2025 fall semester</p>
-			</header>
-			<nav id="nav">
-				<ul>
-					<li><a href="#one" class="active">HTML Practice</a></li>
-					<li><a href="#two">Things I Do</a></li>
-					<li><a href="#three">Practice assets</a></li>
-					<li><a href="#four">Schedule notice</a></li>
-				</ul>
-			</nav>
-			<footer>
-				<ul class="icons">
-					<li><a href="https://www.youtube.com/@sunghwan" class="icon brands fa-youtube" target="_blank"><span class="label">Instagram</span></a></li>
-					<li><a href="https://github.com/tjdghks994" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
-					<li><a href="mailto:tjdghks994@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</footer>
-		</section>
+    <head>
+        <title>Tze Hing (Coco) Fung's CV</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="Professional portfolio of Tze Hing (Coco) Fung, a Psychology major and Educator specializing in TESOL and Language Instruction." />
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        
+        <link rel="stylesheet" href="assets/css/main.css" />
+        
+        <style>
+            body {
+                background-color: #f8f9fa;
+                font-family: 'Poppins', sans-serif;
+            }
 
-		<!-- Wrapper -->
-		<div id="wrapper">
-			<!-- Main -->
-			<div id="main">
-				<!-- One -->
-				<section id="one">
-					<div class="image main" data-position="center">
-						<img src="images/banner.png" alt="" />
-					</div>
-					<div class="container">
-						<header class="major">
-							<h2>Computer Network Practice</h2>
-							<p>Practice for build webpage using HTML5UP templates</p>
-						</header>
-						<p>Do not panic! It must be easy. Please follow step-by-step 👍</p>
-					</div>
-				</section>
+            /* Global styling for all hyperlinks in the main content: Green, Bold, and Italics */
+            #main a {
+                text-decoration: underline;
+                color: #2e7d32 !important; 
+                font-weight: bold !important;         
+                font-style: italic !important;        
+                transition: color 0.3s ease;
+            }
 
-				<!-- Two -->
-				<section id="two">
-					<div class="container">
-						<h3>Things I Do</h3>
-						<p> These are the things I usually do in our lab </p>
-						<ul class="feature-icons">
-							<li class="icon solid fa-book">Read research papers</li>
-							<li class="icon solid fa-pen-fancy">Sometimes, write papers</li>
-							<li class="icon brands fa-python">Write code for experiments</li>
-							<li class="icon solid fa-coffee">Enjoy coffee... <br />
-								I think I drink about 3 cups a day</li>
-							<li class="icon solid fa-school">Also, conduct classes</li>
-							<li class="icon solid fa-users">Are you interested? <br />
-								Please <a href="https://cpss.cau.ac.kr">contact us 🥰</a></li>
-						</ul>
-					</div>
-				</section>
+            #main a:hover {
+                color: #1b5e20 !important; 
+            }
 
-				<!-- Three -->
-				<section id="three">
+            /* Reset navigation link styles to remain standard */
+            #nav ul li a {
+                font-style: normal !important;
+                font-weight: normal !important;
+                text-decoration: none !important;
+            }
+
+            #main .container {
+                min-width: 1250px;
+            }
+
+            #main h3 {
+                color: #1a1a1a;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                border-bottom: 2px solid #2e7d32;
+                display: inline-block;
+                padding-bottom: 5px;
+                margin-bottom: 1.5em;
+            }
+
+            #three .features article {
+                display: flex;
+                align-items: center;
+            }
+
+            #three .features article .inner {
+                flex-grow: 1;
+            }
+
+            #three .features article .image {
+                width: 180px;
+                margin-left: 2em;
+                flex-shrink: 0;
+                align-self: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #three .features article .image.logo-eduhk {
+                width: 320px;
+            }
+
+            #three .features article .image.logo-large {
+                width: 220px;
+            }
+
+            #three .features article .image img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            
+            #header {
+                background: linear-gradient(135deg, #2e3440 0%, #1a1c22 100%);
+                color: #ffffff;
+            }
+            #header h1 a { color: #ffffff !important; text-decoration: none !important; font-style: normal !important; font-weight: bold !important; }
+            #header p { color: #d8dee9; }
+            #nav ul li a {
+                color: #adb5bd;
+                border-color: #495057;
+                transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            }
+            #nav ul li a.active, #nav ul li a:hover {
+                color: #81c784;
+                border-bottom-color: #81c784;
+            }
+
+            section .features article {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 1.5em;
+                margin-bottom: 1.5em;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
+
+            section .features article:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            
+            #four .feature-icons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 0;
+            }
+
+            #four .feature-icons li {
+                background-color: #ffffff;
+                padding: 15px 25px 15px 85px; /* Increased padding to prevent overlap with icon badge */
+                border-radius: 40px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                border: 1px solid #e0e0e0;
+                list-style: none;
+                position: relative;
+                display: flex;
+                align-items: center;
+                min-width: 45%; 
+                transition: transform 0.3s ease;
+            }
+
+            #four .feature-icons li:hover {
+                transform: translateX(5px);
+                border-color: #81c784;
+            }
+
+            #four .feature-icons li:before {
+                position: absolute;
+                left: 0; 
+                top: 0;
+                width: 65px; 
+                height: 100%;
+                background: #81c784; 
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 40px 0 0 40px;
+                font-size: 1.2em;
+            }
+
+            .typed-cursor {
+                color: #81c784;
+                animation: typed-blink 0.7s infinite;
+            }
+            @keyframes typed-blink {
+                50% { opacity: 0.0; }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <section id="header">
+            <header>
+                <span class="image avatar"><img src="images/coco_avatar.png" alt="Coco Fung" /></span>
+                <h1 id="logo"><a href="#">Tze Hing (Coco) Fung</a></h1>
+                <p>Psychology Major at EdUHK<br />
+                TESOL Certified Educator.<br />
+                Multilingual (EN/CN/KR).</p>
+            </header>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="#one" class="active">About Me</a></li>
+                    <li><a href="#three">Education</a></li>
+                    <li><a href="#two">Experience</a></li>
+                    <li><a href="#four">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#five">Activities & Service</a></li>
+                    <li><a href="#six">Honors</a></li>
+                </ul>
+            </nav>
+            
+            <footer>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/tze-hing-fung-297441319/" class="icon brands fa-linkedin" target="_blank" aria-label="LinkedIn Profile"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="mailto:fctzehing28@gmail.com" class="icon solid fa-envelope" aria-label="Email Coco"><span class="label">Email</span></a></li>
+                </ul>
+            </footer>
+        </section>
+
+        <div id="wrapper">
+            <main id="main">
+
+                <section id="one">
+                    <div class="image main" data-position="center">
+                        <img src="images/education_banner.png" alt="" />
+                    </div>
+                    <div class="container">
+                        <header class="major">
+                            <h2>Tze Hing (Coco) Fung</h2>
+                            <p><b><span id="typed-text"></span></b></p>
+                        </header>
+                        <p>A passionate Year 2 Psychology undergraduate at The Education University of Hong Kong (EdUHK) with interests in Developmental Psychology and Clinical Psychology. I have experience teaching English to young learners (ages 3–12), including phonics and early language development. I am also minoring in Korean Language & Culture and hold an accredited 120-Hour TESOL/TEFL Certificate. I am interested in opportunities related to psychology, education, and child development.</p>
+                    </div>
+                </section>
+                
+                <section id="three">
+                    <div class="container">
+                        <h3>Education</h3>
+                        <div class="features">
+                            <article data-aos="fade-up">
+                                <div class="inner">
+                                    <h4><a href="https://www.eduhk.hk/" target="_blank">The Education University of Hong Kong</a></h4>
+                                    <p><i>Bachelor of Social Science in Psychology (Sept 2024 - May 2028)</i></p>
+                                    <p><b>Minor:</b> Korean Language & Culture<br>
+                                    Key Skills: Research Skills, Teamwork, Presentation.</p>
+                                </div>
+                                <span class="image logo-eduhk"><img src="images/eduhk.png" alt="EdUHK Logo" /></span>
+                            </article>
+                            <article data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h4><a href="https://www.ais.edu.hk/" target="_blank">American International School of Hong Kong</a></h4>
+                                    <p><i>High School Diploma (Aug 2019 - June 2024)</i></p>
+                                    <p>AP Coursework: Psychology, Mandarin.</p>
+                                </div>
+                                <span class="image logo-large"><img src="images/ais.png" alt="AIS Logo" /></span>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="two">
+                    <div class="container">
+                        <h3>Work Experience</h3>
+                        <div class="features">
+                            <article data-aos="fade-up">
+                                <div class="inner">
+                                    <h4><a href="https://www.popularlearning.com.hk/" target="_blank">Popular Learning Company Ltd (大眾教室)</a> - English & Chinese Teacher</h4>
+                                    <p><i>Aug 2024 - Present</i></p>
+                                    <ul>
+                                        <li>Instructing students aged 3-9 in English and Chinese literacy.</li>
+                                        <li>Specializing in Phonics instruction for early learners (ages 3-6).</li>
+                                        <li>Facilitating regular parent communication regarding student developmental progress.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h4><a href="https://www.premierscholars.com/" target="_blank">Premier Scholars Education Center</a> - Interview Course Instructor</h4>
+                                    <p><i>Oct 2025 - Dec 2025</i></p>
+                                    <ul>
+                                        <li>Conducted secondary school interview training for sixth-grade students.</li>
+                                        <li>Coached students in public speaking, presentation, and confidence-building.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article data-aos="fade-up" data-aos-delay="200">
+                                <div class="inner">
+                                    <h4><a href="Tze Hing Fung_Internship Cert_CTGU.pdf" target="_blank">China Three Gorges University</a> - ESL Tutor (Internship)</h4>
+                                    <p><i>July 2023</i></p>
+                                    <ul>
+                                        <li>Assisted in teaching English as a Second Language in Yichang, Hubei.</li>
+                                        <li>Completed a certified internship as an "ESL Student Tutor" from July 10, 2023, to July 12, 2023.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="four">
+                    <div class="container">
+                        <h3>Skills</h3>
+                        <ul class="feature-icons">
+                            <li class="icon solid fa-language">Fluent in English, Cantonese, and Mandarin</li>
+                            <li class="icon solid fa-school">Classroom Management & Phonics Instruction</li>
+                            <li class="icon solid fa-microphone">Public Speaking & Interview Coaching</li>
+                            <li class="icon solid fa-flask">Psychological Research & Data Analysis</li>
+                            <li class="icon solid fa-comments">Parent-Teacher Communication</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certifications">
+                    <div class="container">
+                        <h3>Certifications</h3>
+                        <div class="features">
+                            <article data-aos="fade-up">
+                                <div class="inner">
+                                    <h4><a href="Tze Hing Fung_TESOL:TEFL_Cert.pdf" target="_blank">120-Hour TESOL/TEFL Certificate</a></h4>
+                                    <p><i>World TESOL Academy • Issued June 1, 2025</i></p>
+                                    <p>Credential ID: WTA222104088</p>
+                                    <ul>
+                                        <li>Successfully completed an accredited training course focusing on teaching the English language to non-native students.</li>
+                                        <li>Trained for instruction in both overseas and online classroom environments.</li>
+                                        <li>Accredited by ACCREDITAT and The CPD Certification Service.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="five">
 					<div class="container">
-						<h3>Practice assets</h3>
-						<p>Try build your own webpage using <a href="https://html5up.net" target="_blank">HTML5UP</a> templates</p>
+						<h3>Activities & Volunteering</h3>
 						<div class="features">
-							<article>
-								<a href="https://html5up.net" target="_blank" class="image"><img src="images/html5up.png" alt="" /></a>
+							<article data-aos="fade-up">
 								<div class="inner">
-									<h4>HTML5 UP</h4>
-									<p>There are many free templates for your webpage <br /> If you want to visit the website, click the left image </p>
+									<h4>Community Service & Outreach</h4>
+									<p><i>Associated with American International School of Hong Kong</i></p>
+									<p>Completed 106+ service hours over four years. </p>
+									<ul>
+										<li><b>Chest Flag Day:</b> Lead Organizer for fundraising initiatives. </li>
+										<li><b>Eco-Green Club:</b> Active member promoting sustainability within the campus community. </li>
+									</ul>
 								</div>
 							</article>
-							<article>
-								<a href="https://fontawesome.com/icons" class="image"><img src="images/font_awesome.png" alt="" />fontawesome</a>
+							<article data-aos="fade-up" data-aos-delay="100">
 								<div class="inner">
-									<h4>Fontawesome</h4>
-									<p>You can find icons here<br />
-									Also, you can visit the website by clicking the image</p>
+									<h4>Extracurriculars</h4>
+									<p><i>Associated with American International School of Hong Kong</i></p>
+									<ul>
+										<li><b>Choir Member:</b> Engaged in vocal performance and collaborative team coordination. </li>
+										<li><b>Athletic Council:</b> Served as a representative for student sports interests and school spirit. </li>
+									</ul>
 								</div>
 							</article>
 						</div>
 					</div>
 				</section>
 
-				<!-- Four -->
-				<section id="four">
-					<div class="container">
-						<h3>Schedule notice</h3>
-						<div class="features">
-							<article>
-								<a href="#" class="image"><img src="images/happy_chuseok.jpg" alt="" /></a>
-								<div class="inner">
-									<h4>We have class at 1st Oct. Don't forget!</h4>
-									<p>But we don't have class at 8th Oct.<br />
-									Enjoy your chuseok holiday 🌕</p>
-								</div>
-							</article>
-						</div>
-					</div>
-				</section>
-			</div>
+                <section id="six">
+                    <div class="container">
+                        <h3>Honors & Awards</h3>
+                        <div class="features">
+                            <article data-aos="fade-up">
+                                <div class="inner">
+                                    <h4>U20 Girls' Volleyball Team - Most Valuable Player (MVP)</h4>
+                                    <p>Issued by American International School of Hong Kong. Recognized for leadership, teamwork, and athletic excellence.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
 
-			<!-- Footer -->
-			<section id="footer">
-				<div class="container">
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</section>
+            </main>
 
-		</div>
+            <section id="footer">
+                <div class="container">
+                    <ul class="copyright">
+                        <li>&copy; Tze Hing (Coco) Fung. All rights reserved.</li>
+                    </ul>
+                </div>
+            </section>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+        </div>
 
-	</body>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 800, once: true });
+        </script>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var options = {
+                strings: [
+                    'Psychology Student @ EdUHK',
+                    'TESOL Certified Educator',
+                    'English & Chinese Teacher',
+                    'Volleyball MVP & Leader',
+                    'Korean Language Enthusiast'
+                ],
+                typeSpeed: 50,
+                backSpeed: 25,
+                backDelay: 1500,
+                loop: true
+            };
+            var typed = new Typed('#typed-text', options);
+        </script>
+
+    </body>
 </html>
