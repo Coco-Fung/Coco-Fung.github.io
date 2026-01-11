@@ -17,6 +17,24 @@
                 font-family: 'Poppins', sans-serif;
             }
 
+            /* --- Profile Picture Styling (Circle Fix) --- */
+            #header .image.avatar {
+                display: block;
+                width: 180px;      /* Increased size */
+                height: 180px;     /* Forced square for a perfect circle */
+                margin: 0 auto 1.5em auto;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 4px solid #81c784; /* Green accent border */
+                background-color: #fff;
+            }
+
+            #header .image.avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Prevents oval distortion */
+            }
+
             /* Global styling for all hyperlinks: Green, Bold, and Italics */
             #main a {
                 text-decoration: underline;
@@ -115,7 +133,6 @@
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             }
             
-            /* Skills styling with fixes for clipping and spacing */
             #four .feature-icons {
                 display: flex;
                 flex-wrap: wrap;
@@ -184,7 +201,8 @@
                 }
 
                 #header .image.avatar {
-                    width: 80px;
+                    width: 120px; /* Scaled for mobile */
+                    height: 120px;
                 }
             }
 
@@ -200,7 +218,7 @@
     <body class="is-preload">
         <section id="header">
             <header>
-                <span class="image avatar"><img src="images/coco_avatar.png" alt="Coco Fung" /></span>
+                <span class="image avatar"><img src="images/coco.png" alt="Coco Fung" /></span>
                 <h1 id="logo"><a href="#">Tze Hing (Coco) Fung</a></h1>
                 <p>Psychology Major at EdUHK<br />
                 TESOL/TEFL Certified Educator.</p>
@@ -238,7 +256,7 @@
                             <h2>Tze Hing (Coco) Fung</h2>
                             <p><b><span id="typed-text"></span></b></p>
                         </header>
-                        <p>A passionate Year 2 Psychology undergraduate at The Education University of Hong Kong (EdUHK) with interests in developmental psychology and clinical psychology. I have experience teaching English to young learners (ages 3–12), including phonics and early language development. I am also minoring in Korean Language & Culture and hold an accredited 120-Hour TESOL/TEFL Certificate. I am interested in opportunities related to psychology, education, and child development.</p>
+                        <p>A passionate Year 2 Psychology undergraduate at The Education University of Hong Kong (EdUHK) with interests in developmental psychology and clinical psychology. I have experience teaching English to young learners (ages 3–12), including phonics and early language development. I am also minoring in Korean Language & Culture and hold an accredited 120-Hour TESOL/TEFL Certificate[cite: 12]. I am interested in opportunities related to psychology, education, and child development.</p>
                     </div>
                 </section>
                 
@@ -295,10 +313,10 @@
                             <article data-aos="fade-up" data-aos-delay="200">
                                 <div class="inner">
                                     <h4><a href="Tze Hing Fung_Internship Cert_CTGU.pdf" target="_blank">China Three Gorges University</a> - ESL Tutor (Internship)</h4>
-                                    <p><i>July 2023</i></p>
+                                    <p><i>July 2023 [cite: 10]</i></p>
                                     <ul>
                                         <li>Assisted in teaching English as a Second Language in Yichang, Hubei.</li>
-                                        <li>Completed a certified internship as an "ESL Student Tutor" from July 10, 2023, to July 12, 2023.</li>
+                                        <li>Completed a certified internship as an "ESL Student Tutor" from July 10, 2023, to July 12, 2023[cite: 5].</li>
                                     </ul>
                                 </div>
                             </article>
@@ -327,12 +345,12 @@
                             <article data-aos="fade-up">
                                 <div class="inner">
                                     <h4><a href="Tze Hing Fung_TESOL:TEFL_Cert.pdf" target="_blank">120-Hour TESOL/TEFL Certificate</a></h4>
-                                    <p><i>World TESOL Academy • Issued June 1, 2025</i></p>
-                                    <p>Credential ID: WTA222104088</p>
+                                    <p><i>World TESOL Academy • Issued June 1, 2025 [cite: 23]</i></p>
+                                    <p>Credential ID: WTA222104088 [cite: 23]</p>
                                     <ul>
-                                        <li>Successfully completed an accredited training course focusing on teaching the English language to non-native students.</li>
-                                        <li>Qualified for instruction in both overseas and online classroom environments.</li>
-                                        <li>Accredited by ACCREDITAT and The CPD Certification Service.</li>
+                                        <li>Successfully completed an accredited course focusing on teaching English to non-native students[cite: 18].</li>
+                                        <li>Qualified for instruction in both overseas and online classroom environments[cite: 18].</li>
+                                        <li>Accredited by ACCREDITAT and The CPD Certification Service[cite: 19, 21].</li>
                                     </ul>
                                 </div>
                             </article>
