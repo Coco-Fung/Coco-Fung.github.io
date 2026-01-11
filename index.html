@@ -17,7 +17,7 @@
                 font-family: 'Poppins', sans-serif;
             }
 
-            /* Global styling for all hyperlinks in the main content: Green, Bold, and Italics */
+            /* Global styling for all hyperlinks: Green, Bold, and Italics */
             #main a {
                 text-decoration: underline;
                 color: #2e7d32 !important; 
@@ -115,6 +115,7 @@
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             }
             
+            /* Skills styling with fixes for clipping and spacing */
             #four .feature-icons {
                 display: flex;
                 flex-wrap: wrap;
@@ -124,7 +125,7 @@
 
             #four .feature-icons li {
                 background-color: #ffffff;
-                padding: 15px 25px 15px 85px; /* Increased padding to prevent overlap with icon badge */
+                padding: 18px 25px 18px 85px; 
                 border-radius: 40px;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.07);
                 border: 1px solid #e0e0e0;
@@ -132,8 +133,11 @@
                 position: relative;
                 display: flex;
                 align-items: center;
-                min-width: 45%; 
+                width: calc(50% - 15px); 
                 transition: transform 0.3s ease;
+                color: #444;
+                font-size: 0.95em;
+                line-height: 1.4;
             }
 
             #four .feature-icons li:hover {
@@ -153,7 +157,7 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 40px 0 0 40px;
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
 
             .typed-cursor {
@@ -263,7 +267,7 @@
                             </article>
                             <article data-aos="fade-up" data-aos-delay="200">
                                 <div class="inner">
-                                    <h4><a href="Tze Hing Fung_Internship Cert_CTGU.pdf" target="_blank">China Three Gorges University</a> - ESL Tutor (Internship)</h4>
+                                    <h4><a href="Tze Hing Fung_Internship Cert_CTGU.pdf" target="_blank">National College of China Three Gorges University</a> - ESL Tutor (Internship)</h4>
                                     <p><i>July 2023</i></p>
                                     <ul>
                                         <li>Assisted in teaching English as a Second Language in Yichang, Hubei.</li>
@@ -283,7 +287,8 @@
                             <li class="icon solid fa-school">Classroom Management & Phonics Instruction</li>
                             <li class="icon solid fa-microphone">Public Speaking & Interview Coaching</li>
                             <li class="icon solid fa-flask">Psychological Research & Data Analysis</li>
-                            <li class="icon solid fa-comments">Parent-Teacher Communication</li>
+                            <li class="icon solid fa-comments">Professional Parent-Teacher Communication</li>
+                            <li class="icon solid fa-user-check">Developing confidence and social skills in young learners.</li>
                         </ul>
                     </div>
                 </section>
@@ -298,8 +303,8 @@
                                     <p><i>World TESOL Academy • Issued June 1, 2025</i></p>
                                     <p>Credential ID: WTA222104088</p>
                                     <ul>
-                                        <li>Successfully completed an accredited training course focusing on teaching the English language to non-native students.</li>
-                                        <li>Trained for instruction in both overseas and online classroom environments.</li>
+                                        <li>Bearer has successfully completed an accredited training course focusing on the teaching of the English language to non-native students.</li>
+                                        <li>Qualified for instruction in both overseas and online classroom environments.</li>
                                         <li>Accredited by ACCREDITAT and The CPD Certification Service.</li>
                                     </ul>
                                 </div>
@@ -309,33 +314,33 @@
                 </section>
                 
                 <section id="five">
-					<div class="container">
-						<h3>Activities & Volunteering</h3>
-						<div class="features">
-							<article data-aos="fade-up">
-								<div class="inner">
-									<h4>Community Service & Outreach</h4>
-									<p><i>Associated with American International School of Hong Kong</i></p>
-									<p>Completed 106+ service hours over four years. </p>
-									<ul>
-										<li><b>Chest Flag Day:</b> Lead Organizer for fundraising initiatives. </li>
-										<li><b>Eco-Green Club:</b> Active member promoting sustainability within the campus community. </li>
-									</ul>
-								</div>
-							</article>
-							<article data-aos="fade-up" data-aos-delay="100">
-								<div class="inner">
-									<h4>Extracurriculars</h4>
-									<p><i>Associated with American International School of Hong Kong</i></p>
-									<ul>
-										<li><b>Choir Member:</b> Engaged in vocal performance and collaborative team coordination. </li>
-										<li><b>Athletic Council:</b> Served as a representative for student sports interests and school spirit. </li>
-									</ul>
-								</div>
-							</article>
-						</div>
-					</div>
-				</section>
+                    <div class="container">
+                        <h3>Activities & Volunteering</h3>
+                        <div class="features">
+                            <article data-aos="fade-up">
+                                <div class="inner">
+                                    <h4>Community Service & Outreach</h4>
+                                    <p><i>Associated with American International School of Hong Kong</i></p>
+                                    <p>Completed 106+ service hours over four years.</p>
+                                    <ul>
+                                        <li><b>Chest Flag Day:</b> Lead Organizer for fundraising initiatives.</li>
+                                        <li><b>Eco-Green Club:</b> Active member promoting sustainability within the campus community.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h4>Extracurriculars</h4>
+                                    <p><i>Associated with American International School of Hong Kong</i></p>
+                                    <ul>
+                                        <li><b>Choir Member:</b> Engaged in vocal performance and collaborative team coordination.</li>
+                                        <li><b>Athletic Council:</b> Served as a representative for student sports interests and school spirit.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
 
                 <section id="six">
                     <div class="container">
@@ -384,7 +389,6 @@
                     'Passionate in Developmental Psychology',
                     'Passionate in Clinical Psychology',
                     'TESOL/TEFL Certified Educator',
-            
                 ],
                 typeSpeed: 50,
                 backSpeed: 25,
