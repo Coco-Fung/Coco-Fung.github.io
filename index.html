@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="Professional portfolio of Tze Hing (Coco) Fung, a Psychology major and Educator specializing in TESOL and Language Instruction." />
         
+        <link rel="icon" type="image/png" href="favicon.png">
+        
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -271,23 +273,40 @@
                 50% { opacity: 0.0; }
             }
 
+            /* --- Back to Top Button --- */
+            #backToTop {
+                display: none; 
+                position: fixed;
+                bottom: 30px;
+                right: 330px; 
+                z-index: 1100;
+                border: none;
+                outline: none;
+                background-color: #81c784;
+                color: white;
+                cursor: pointer;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                font-size: 1.2em;
+                transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+                align-items: center;
+                justify-content: center;
+            }
+
+            #backToTop:hover {
+                background-color: #2e7d32;
+                transform: translateY(-5px);
+            }
+
             /* --- TABLET BREAKPOINT (768px - 1024px) --- */
             @media screen and (max-width: 1024px) {
                 #main .container {
                     padding: 0 1.5em;
                 }
-
-                #three .features article .image.logo-eduhk {
-                    width: 300px;
-                }
-
-                #three .features article .image.logo-large {
-                    width: 120px;
-                }
-
-                #four .feature-icons li {
-                    font-size: 0.9em;
-                    padding: 15px 20px 15px 75px;
+                #backToTop {
+                    right: 320px;
                 }
             }
 
@@ -303,6 +322,13 @@
                 #wrapper {
                     margin-right: 0;
                     width: 100%;
+                }
+
+                #backToTop {
+                    right: 20px; 
+                    bottom: 20px;
+                    width: 45px;
+                    height: 45px;
                 }
 
                 #header .image.avatar {
@@ -353,45 +379,8 @@
                 }
             }
 
-            /* --- SMALL MOBILE BREAKPOINT (up to 480px) --- */
-            @media screen and (max-width: 480px) {
-                #header {
-                    padding: 1em;
-                }
-
-                #header h1 {
-                    font-size: 1.5em;
-                }
-
-                #header p {
-                    font-size: 0.9em;
-                }
-
-                #main .container {
-                    padding: 0 0.75em;
-                }
-
-                #main h3 {
-                    font-size: 1.1em;
-                }
-
-                section .features article {
-                    padding: 0.75em;
-                }
-
-                #four .feature-icons li {
-                    padding: 12px 15px 12px 60px;
-                    font-size: 0.8em;
-                }
-
-                #four .feature-icons li:before {
-                    width: 50px;
-                    font-size: 1em;
-                }
-
-                footer .icons li a {
-                    font-size: 1.2em;
-                }
+            #four .feature-icons li:before {
+                content: var(--icon-content, '\f00c');
             }
         </style>
     </head>
@@ -590,6 +579,8 @@
             </section>
         </div>
 
+        <button id="backToTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
             AOS.init({ duration: 800, once: true });
@@ -613,14 +604,24 @@
         </script>
 
         <script>
+            // Back to Top functionality
+            const backToTopBtn = document.getElementById("backToTop");
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 400) {
+                    backToTopBtn.style.display = "flex";
+                } else {
+                    backToTopBtn.style.display = "none";
+                }
+            });
+            backToTopBtn.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
             // Smooth scrolling for navigation
             document.querySelectorAll('#nav a').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
-                    // Remove active from all links
                     document.querySelectorAll('#nav a').forEach(link => link.classList.remove('active'));
-                    // Add active to clicked link
                     this.classList.add('active');
                     
                     const targetId = this.getAttribute('href').substring(1);
@@ -629,11 +630,7 @@
                         const headerOffset = 20;
                         const elementPosition = target.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                        
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                     }
                 });
             });
@@ -647,51 +644,29 @@
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
                     const sectionBottom = sectionTop + section.offsetHeight;
-                    
                     if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                         current = section.getAttribute('id');
                     }
                 });
 
-                // Special case for the last section (Honors)
                 const lastSection = sections[sections.length - 1];
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.documentElement.scrollHeight;
-                
-                if (window.scrollY + windowHeight >= documentHeight - 50) {
+                if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 50) {
                     current = lastSection.getAttribute('id');
                 }
 
                 document.querySelectorAll('#nav a').forEach(a => {
                     a.classList.remove('active');
-                    const href = a.getAttribute('href').substring(1);
-                    if (href === current) {
+                    if (a.getAttribute('href').substring(1) === current) {
                         a.classList.add('active');
                     }
                 });
             });
 
             // Icon content setup
-            const icons = {
-                '\f1ab': 'language',
-                '\f549': 'school', 
-                '\f130': 'microphone',
-                '\f0c3': 'flask',
-                '\f086': 'comments',
-                '\f4fc': 'user-check'
-            };
-
             document.querySelectorAll('#four .feature-icons li').forEach(li => {
                 const iconCode = li.style.getPropertyValue('--fa-icon').replace(/['"]/g, '');
-                li.setAttribute('data-icon', iconCode);
                 li.style.setProperty('--icon-content', `"${iconCode}"`);
             });
         </script>
-
-        <style>
-            #four .feature-icons li:before {
-                content: var(--icon-content, '\f00c');
-            }
-        </style>
     </body>
 </html>
