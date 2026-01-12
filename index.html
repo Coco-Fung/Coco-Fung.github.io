@@ -8,13 +8,19 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         
         <style>
-            body {
+            * {
+                box-sizing: border-box;
+            }
+
+            html, body {
                 background-color: #f8f9fa;
                 font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
             }
 
             /* --- Profile Picture Styling --- */
@@ -54,7 +60,10 @@
             }
 
             #main .container {
-                min-width: 1250px;
+                max-width: 1250px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 2em;
             }
 
             #main h3 {
@@ -77,7 +86,7 @@
                 flex-grow: 1;
             }
 
-            /* --- LOGO SIZE ADJUSTMENTS START HERE --- */
+            /* --- LOGO SIZE ADJUSTMENTS --- */
             #three .features article .image {
                 margin-left: 2em;
                 flex-shrink: 0;
@@ -87,16 +96,13 @@
                 justify-content: center;
             }
 
-            /* EdUHK Logo Size */
             #three .features article .image.logo-eduhk {
-                width: 340px; /* Reduced from 180px */
+                width: 340px;
             }
 
-            /* AIS Logo Size */
             #three .features article .image.logo-large {
-                width: 220px; /* Reduced from 140px */
+                width: 220px;
             }
-            /* --- LOGO SIZE ADJUSTMENTS END HERE --- */
 
             #three .features article .image img {
                 width: 100%;
@@ -107,14 +113,45 @@
             #header {
                 background: linear-gradient(135deg, #2e3440 0%, #1a1c22 100%);
                 color: #ffffff;
+                padding: 2em;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 300px;
+                height: 100vh;
+                overflow-y: auto;
+                z-index: 1000;
+                box-sizing: border-box;
             }
-            #header h1 a { color: #ffffff !important; text-decoration: none !important; font-style: normal !important; font-weight: bold !important; }
+
+            #wrapper {
+                margin-right: 300px;
+                width: calc(100% - 300px);
+            }
+
+            #header h1 a { 
+                color: #ffffff !important; 
+                text-decoration: none !important; 
+                font-style: normal !important; 
+                font-weight: bold !important; 
+            }
+
             #header p { color: #d8dee9; }
+
+            #nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 1em 0;
+            }
+
             #nav ul li a {
                 color: #adb5bd;
-                border-color: #495057;
+                border-bottom: 2px solid transparent;
                 transition: color 0.3s ease, border-bottom-color 0.3s ease;
+                display: block;
+                padding: 0.5em 0;
             }
+
             #nav ul li a.active, #nav ul li a:hover {
                 color: #81c784;
                 border-bottom-color: #81c784;
@@ -151,7 +188,7 @@
                 position: relative;
                 display: flex;
                 align-items: center;
-                width: calc(50% - 15px); 
+                width: calc(50% - 7.5px); 
                 transition: transform 0.3s ease;
                 color: #444;
                 font-size: 0.95em;
@@ -176,13 +213,108 @@
                 justify-content: center;
                 border-radius: 40px 0 0 40px;
                 font-size: 1.3em;
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
             }
 
-            @media screen and (max-width: 980px) {
+            footer .icons {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                gap: 1em;
+                justify-content: center;
+                margin-top: 1em;
+            }
+
+            footer .icons li a {
+                color: #adb5bd;
+                font-size: 1.5em;
+                transition: color 0.3s ease;
+            }
+
+            footer .icons li a:hover {
+                color: #81c784;
+            }
+
+            .image.main {
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: 2em;
+            }
+
+            .image.main img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            #footer {
+                background: #2e3440;
+                color: #d8dee9;
+                padding: 2em;
+                text-align: center;
+            }
+
+            .copyright {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .typed-cursor {
+                color: #81c784;
+                animation: typed-blink 0.7s infinite;
+            }
+
+            @keyframes typed-blink {
+                50% { opacity: 0.0; }
+            }
+
+            /* --- TABLET BREAKPOINT (768px - 1024px) --- */
+            @media screen and (max-width: 1024px) {
                 #main .container {
-                    min-width: 100% !important;
+                    padding: 0 1.5em;
+                }
+
+                #three .features article .image.logo-eduhk {
+                    width: 200px;
+                }
+
+                #three .features article .image.logo-large {
+                    width: 140px;
+                }
+
+                #four .feature-icons li {
+                    font-size: 0.9em;
+                    padding: 15px 20px 15px 75px;
+                }
+            }
+
+            /* --- MOBILE BREAKPOINT (up to 767px) --- */
+            @media screen and (max-width: 767px) {
+                #header {
+                    position: relative;
                     width: 100%;
-                    padding: 1em;
+                    height: auto;
+                    padding: 1.5em;
+                }
+
+                #wrapper {
+                    margin-right: 0;
+                    width: 100%;
+                }
+
+                #header .image.avatar {
+                    width: 120px; 
+                    height: 120px;
+                }
+
+                #main .container {
+                    padding: 0 1em;
+                }
+
+                #main h3 {
+                    font-size: 1.2em;
                 }
 
                 #three .features article {
@@ -191,31 +323,78 @@
                 }
 
                 #three .features article .image {
-                    margin: 1em 0 0 0;
-                    width: 80px !important; /* Smaller on mobile too */
+                    margin: 1em auto 0 auto;
+                    width: 100px !important;
+                }
+
+                #three .features article .image.logo-eduhk,
+                #three .features article .image.logo-large {
+                    width: 100px !important;
                 }
 
                 #four .feature-icons li {
-                    width: 100% !important;
-                    margin-right: 0;
+                    width: 100%;
+                    font-size: 0.85em;
+                    padding: 15px 20px 15px 70px;
                 }
 
-                #header .image.avatar {
-                    width: 120px; 
-                    height: 120px;
+                #four .feature-icons li:before {
+                    width: 55px;
+                    font-size: 1.1em;
+                }
+
+                section .features article {
+                    padding: 1em;
+                }
+
+                #nav ul li a {
+                    font-size: 0.9em;
                 }
             }
 
-            .typed-cursor {
-                color: #81c784;
-                animation: typed-blink 0.7s infinite;
-            }
-            @keyframes typed-blink {
-                50% { opacity: 0.0; }
+            /* --- SMALL MOBILE BREAKPOINT (up to 480px) --- */
+            @media screen and (max-width: 480px) {
+                #header {
+                    padding: 1em;
+                }
+
+                #header h1 {
+                    font-size: 1.5em;
+                }
+
+                #header p {
+                    font-size: 0.9em;
+                }
+
+                #main .container {
+                    padding: 0 0.75em;
+                }
+
+                #main h3 {
+                    font-size: 1.1em;
+                }
+
+                section .features article {
+                    padding: 0.75em;
+                }
+
+                #four .feature-icons li {
+                    padding: 12px 15px 12px 60px;
+                    font-size: 0.8em;
+                }
+
+                #four .feature-icons li:before {
+                    width: 50px;
+                    font-size: 1em;
+                }
+
+                footer .icons li a {
+                    font-size: 1.2em;
+                }
             }
         </style>
     </head>
-    <body class="is-preload">
+    <body>
         <section id="header">
             <header>
                 <span class="image avatar"><img src="images/coco.png" alt="Coco Fung" /></span>
@@ -231,22 +410,21 @@
                     <li><a href="#Work Experience">Work Experience</a></li>
                     <li><a href="#Skills">Skills</a></li>
                     <li><a href="#Certifications">Certifications</a></li>
-                    <li><a href="#Activities & Volunteering">Activities & Volunteering</a></li>
-                    <li><a href="#Honors">Honors</a></li>
+                    <li><a href="#Activities and Volunteering">Activities and Volunteering</a></li>
+                    <li><a href="#Honors and Awards">Honors and Awards</a></li>
                 </ul>
             </nav>
             
             <footer>
                 <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/tze-hing-fung-297441319/" class="icon brands fa-linkedin" target="_blank" aria-label="LinkedIn Profile"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="mailto:fctzehing28@gmail.com" class="icon solid fa-envelope" aria-label="Email Coco"><span class="label">Email</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/tze-hing-fung-297441319/" class="fab fa-linkedin" target="_blank" aria-label="LinkedIn Profile"></a></li>
+                    <li><a href="mailto:fctzehing28@gmail.com" class="fas fa-envelope" aria-label="Email Coco"></a></li>
                 </ul>
             </footer>
         </section>
 
         <div id="wrapper">
             <main id="main">
-
                 <section id="About Me">
                     <div class="image main" data-position="center">
                         <img src="images/banner.png" alt="" />
@@ -328,12 +506,12 @@
                     <div class="container" id="four">
                         <h3>Skills</h3>
                         <ul class="feature-icons">
-                            <li class="icon solid fa-language">Fluent in English, Cantonese, and Mandarin</li>
-                            <li class="icon solid fa-school">Classroom Management & Phonics Instruction</li>
-                            <li class="icon solid fa-microphone">Public Speaking & Interview Coaching</li>
-                            <li class="icon solid fa-flask">Psychological Research & Data Analysis</li>
-                            <li class="icon solid fa-comments">Professional Parent-Teacher Communication</li>
-                            <li class="icon solid fa-user-check">Developing confidence and social skills in young learners.</li>
+                            <li style="--fa-icon: '\f1ab'">Fluent in English, Cantonese, and Mandarin</li>
+                            <li style="--fa-icon: '\f549'">Classroom Management & Phonics Instruction</li>
+                            <li style="--fa-icon: '\f130'">Public Speaking & Interview Coaching</li>
+                            <li style="--fa-icon: '\f0c3'">Psychological Research & Data Analysis</li>
+                            <li style="--fa-icon: '\f086'">Professional Parent-Teacher Communication</li>
+                            <li style="--fa-icon: '\f4fc'">Developing confidence and social skills in young learners.</li>
                         </ul>
                     </div>
                 </section>
@@ -358,9 +536,9 @@
                     </div>
                 </section>
                 
-                <section id="Activities & Volunteering">
+                <section id="Activities and Volunteering">
                     <div class="container">
-                        <h3>Activities & Volunteering</h3>
+                        <h3>Activities and Volunteering</h3>
                         <div class="features">
                             <article data-aos="fade-up">
                                 <div class="inner">
@@ -387,9 +565,9 @@
                     </div>
                 </section>
 
-                <section id="Honors">
+                <section id="Honors and Awards">
                     <div class="container">
-                        <h3>Honors & Awards</h3>
+                        <h3>Honors and Awards</h3>
                         <div class="features">
                             <article data-aos="fade-up">
                                 <div class="inner">
@@ -400,7 +578,6 @@
                         </div>
                     </div>
                 </section>
-
             </main>
 
             <section id="footer">
@@ -410,16 +587,7 @@
                     </ul>
                 </div>
             </section>
-
         </div>
-
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
@@ -443,5 +611,86 @@
             var typed = new Typed('#typed-text', options);
         </script>
 
+        <script>
+            // Smooth scrolling for navigation
+            document.querySelectorAll('#nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    // Remove active from all links
+                    document.querySelectorAll('#nav a').forEach(link => link.classList.remove('active'));
+                    // Add active to clicked link
+                    this.classList.add('active');
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        const headerOffset = 20;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Active navigation highlighting
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const sections = document.querySelectorAll('section[id]');
+                const scrollPosition = window.scrollY + 150;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                // Special case for the last section (Honors)
+                const lastSection = sections[sections.length - 1];
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                
+                if (window.scrollY + windowHeight >= documentHeight - 50) {
+                    current = lastSection.getAttribute('id');
+                }
+
+                document.querySelectorAll('#nav a').forEach(a => {
+                    a.classList.remove('active');
+                    const href = a.getAttribute('href').substring(1);
+                    if (href === current) {
+                        a.classList.add('active');
+                    }
+                });
+            });
+
+            // Icon content setup
+            const icons = {
+                '\f1ab': 'language',
+                '\f549': 'school', 
+                '\f130': 'microphone',
+                '\f0c3': 'flask',
+                '\f086': 'comments',
+                '\f4fc': 'user-check'
+            };
+
+            document.querySelectorAll('#four .feature-icons li').forEach(li => {
+                const iconCode = li.style.getPropertyValue('--fa-icon').replace(/['"]/g, '');
+                li.setAttribute('data-icon', iconCode);
+                li.style.setProperty('--icon-content', `"${iconCode}"`);
+            });
+        </script>
+
+        <style>
+            #four .feature-icons li:before {
+                content: var(--icon-content, '\f00c');
+            }
+        </style>
     </body>
 </html>
