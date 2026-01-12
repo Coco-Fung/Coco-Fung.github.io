@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="Professional portfolio of Tze Hing (Coco) Fung, a Psychology major and Educator specializing in TESOL and Language Instruction." />
         
-        <link rel="icon" type="images/png" href="images/favicon.png">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
         
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -217,6 +217,8 @@
                 font-size: 1.3em;
                 font-family: 'Font Awesome 5 Free';
                 font-weight: 900;
+                /* Updated content logic */
+                content: var(--icon-content);
             }
 
             footer .icons {
@@ -378,10 +380,6 @@
                     font-size: 0.9em;
                 }
             }
-
-            #four .feature-icons li:before {
-                content: var(--icon-content, '\f00c');
-            }
         </style>
     </head>
     <body>
@@ -480,7 +478,7 @@
                             </article>
                             <article data-aos="fade-up" data-aos-delay="200">
                                 <div class="inner">
-                                    <h4><a href="Tze Hing Fung_Internship Cert_CTGU.pdf" target="_blank">China Three Gorges University</a> - ESL Tutor (Internship)</h4>
+                                    <h4>China Three Gorges University - ESL Tutor (Internship)</h4>
                                     <p><i>July 2023</i></p>
                                     <ul>
                                         <li>Assisted in teaching English as a Second Language in Yichang, Hubei.</li>
@@ -512,7 +510,7 @@
                         <div class="features">
                             <article data-aos="fade-up">
                                 <div class="inner">
-                                    <h4><a href="Tze Hing Fung_TESOL:TEFL_Cert.pdf" target="_blank">120-Hour TESOL/TEFL Certificate</a></h4>
+                                    <h4>120-Hour TESOL/TEFL Certificate</h4>
                                     <p><i>World TESOL Academy • Issued June 1, 2025</i></p>
                                     <p>Credential ID: WTA222104088</p>
                                     <ul>
@@ -662,7 +660,7 @@
                 });
             });
 
-            // Icon content setup
+            // Icon content setup - FIXED for proper rendering
             document.querySelectorAll('#four .feature-icons li').forEach(li => {
                 const iconCode = li.style.getPropertyValue('--fa-icon').replace(/['"]/g, '');
                 li.style.setProperty('--icon-content', `"${iconCode}"`);
