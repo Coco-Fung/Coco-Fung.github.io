@@ -17,25 +17,24 @@
                 font-family: 'Poppins', sans-serif;
             }
 
-            /* --- Profile Picture Styling (Circle Fix) --- */
+            /* --- Profile Picture Styling --- */
             #header .image.avatar {
                 display: block;
-                width: 180px;      /* Increased size */
-                height: 180px;     /* Forced square for a perfect circle */
+                width: 180px;      
+                height: 180px;     
                 margin: 0 auto 1.5em auto;
                 border-radius: 50%;
                 overflow: hidden;
-                border: 4px solid #81c784; /* Green accent border */
+                border: 4px solid #81c784; 
                 background-color: #fff;
             }
 
             #header .image.avatar img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover; /* Prevents oval distortion */
+                object-fit: cover; 
             }
 
-            /* Global styling for all hyperlinks: Green, Bold, and Italics */
             #main a {
                 text-decoration: underline;
                 color: #2e7d32 !important; 
@@ -48,7 +47,6 @@
                 color: #1b5e20 !important; 
             }
 
-            /* Reset navigation link styles to remain standard */
             #nav ul li a {
                 font-style: normal !important;
                 font-weight: normal !important;
@@ -79,8 +77,8 @@
                 flex-grow: 1;
             }
 
+            /* --- LOGO SIZE ADJUSTMENTS START HERE --- */
             #three .features article .image {
-                width: 180px;
                 margin-left: 2em;
                 flex-shrink: 0;
                 align-self: center;
@@ -89,13 +87,16 @@
                 justify-content: center;
             }
 
+            /* EdUHK Logo Size */
             #three .features article .image.logo-eduhk {
-                width: 320px;
+                width: 340px; /* Reduced from 180px */
             }
 
+            /* AIS Logo Size */
             #three .features article .image.logo-large {
-                width: 220px;
+                width: 220px; /* Reduced from 140px */
             }
+            /* --- LOGO SIZE ADJUSTMENTS END HERE --- */
 
             #three .features article .image img {
                 width: 100%;
@@ -177,7 +178,6 @@
                 font-size: 1.3em;
             }
 
-            /* --- Mobile Responsiveness --- */
             @media screen and (max-width: 980px) {
                 #main .container {
                     min-width: 100% !important;
@@ -192,7 +192,7 @@
 
                 #three .features article .image {
                     margin: 1em 0 0 0;
-                    width: 150px !important;
+                    width: 80px !important; /* Smaller on mobile too */
                 }
 
                 #four .feature-icons li {
@@ -201,7 +201,7 @@
                 }
 
                 #header .image.avatar {
-                    width: 120px; /* Scaled for mobile */
+                    width: 120px; 
                     height: 120px;
                 }
             }
@@ -261,7 +261,7 @@
                 </section>
                 
                 <section id="Education">
-                    <div class="container">
+                    <div class="container" id="three">
                         <h3>Education</h3>
                         <div class="features">
                             <article data-aos="fade-up">
@@ -325,7 +325,7 @@
                 </section>
 
                 <section id="Skills">
-                    <div class="container">
+                    <div class="container" id="four">
                         <h3>Skills</h3>
                         <ul class="feature-icons">
                             <li class="icon solid fa-language">Fluent in English, Cantonese, and Mandarin</li>
