@@ -217,7 +217,6 @@
                 font-size: 1.3em;
                 font-family: 'Font Awesome 5 Free';
                 font-weight: 900;
-                /* Updated content logic */
                 content: var(--icon-content);
             }
 
@@ -478,7 +477,7 @@
                             </article>
                             <article data-aos="fade-up" data-aos-delay="200">
                                 <div class="inner">
-                                    <h4>China Three Gorges University - ESL Tutor (Internship)</h4>
+                                    <h4><a href="certificates/Tze_Hing_Fung_Internship_Cert_CTGU.pdf" target="_blank">China Three Gorges University</a> - ESL Tutor (Internship)</h4>
                                     <p><i>July 2023</i></p>
                                     <ul>
                                         <li>Assisted in teaching English as a Second Language in Yichang, Hubei.</li>
@@ -510,7 +509,7 @@
                         <div class="features">
                             <article data-aos="fade-up">
                                 <div class="inner">
-                                    <h4>120-Hour TESOL/TEFL Certificate</h4>
+                                    <h4><a href="certificates/Tze_Hing_Fung_TESOL_TEFL_Cert.pdf" target="_blank">120-Hour TESOL/TEFL Certificate</a></h4>
                                     <p><i>World TESOL Academy • Issued June 1, 2025</i></p>
                                     <p>Credential ID: WTA222104088</p>
                                     <ul>
@@ -660,7 +659,7 @@
                 });
             });
 
-            // Icon content setup - FIXED for proper rendering
+            // Icon content setup
             document.querySelectorAll('#four .feature-icons li').forEach(li => {
                 const iconCode = li.style.getPropertyValue('--fa-icon').replace(/['"]/g, '');
                 li.style.setProperty('--icon-content', `"${iconCode}"`);
